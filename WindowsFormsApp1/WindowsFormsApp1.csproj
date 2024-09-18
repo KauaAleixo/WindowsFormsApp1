@@ -46,26 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmPousada2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPousada2.Designer.cs">
-      <DependentUpon>FrmPousada2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmPousada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPousada.Designer.cs">
-      <DependentUpon>FrmPousada.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Controller\Conection.cs" />
+    <Compile Include="Model\Chalé.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmPousada.resx">
+    <Compile Include="View\FrmPousada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmPousada.Designer.cs">
       <DependentUpon>FrmPousada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmPousada2.resx">
+    </Compile>
+    <Compile Include="View\FrmPousada2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmPousada2.Designer.cs">
       <DependentUpon>FrmPousada2.cs</DependentUpon>
-    </EmbeddedResource>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +71,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FrmPousada.resx">
+      <DependentUpon>FrmPousada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmPousada2.resx">
+      <DependentUpon>FrmPousada2.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -87,6 +89,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\%24this.BackgroundImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

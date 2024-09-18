@@ -93,6 +93,7 @@
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(202, 20);
             this.txbName.TabIndex = 4;
+            this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
             // 
             // label1
             // 
