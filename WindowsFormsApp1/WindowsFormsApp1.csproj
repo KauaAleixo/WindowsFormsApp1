@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Usuário DAO.cs" />
+    <Compile Include="Usuário.cs" />
     <Compile Include="Controller\Conection.cs" />
     <Compile Include="Model\Chalé.cs" />
     <Compile Include="Program.cs" />
