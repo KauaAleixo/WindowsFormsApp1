@@ -21,5 +21,21 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmPousada3 principal = new FrmPousada3();
+            this.Visible = false; // ESCONDER TELA 
+            principal.ShowDialog();//ABRI A TELA 
+            this.Visible = true; // VOLTA A MOSTRAR A TELA
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmPousada5 principal = new FrmPousada5();
+            this.Visible = false; // ESCONDER TELA 
+            principal.ShowDialog();//ABRI A TELA 
+            this.Visible = true; // VOLTA A MOSTRAR A TELA
+        }
     }
 }
