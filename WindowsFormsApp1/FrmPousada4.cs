@@ -24,5 +24,13 @@ namespace WindowsFormsApp1
             principal.ShowDialog();//ABRI A TELA 
             this.Visible = true; // VOLTA A MOSTRAR A TELA
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmPousada5 principal = new FrmPousada5();
+            this.Visible = false; // ESCONDER TELA 
+            principal.ShowDialog();//ABRI A TELA 
+            this.Visible = true; // VOLTA A MOSTRAR A TELA
+        }
     }
 }
