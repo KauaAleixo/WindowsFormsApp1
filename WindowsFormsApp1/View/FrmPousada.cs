@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
 
 
         {
-            if (txbName.Text == "kaua" && txbSenha.Text == "123456" && txbCpf.Text == "551-726-888-97")
+            if (txbName.Text == "kaua" && txbSenha.Text == "123456" )
             {
                 txbName.Text = string.Empty; //Limpa o campo de usuario 
                 txbSenha.Text = string.Empty; //Limpa o campo de senha
@@ -50,14 +50,13 @@ namespace WindowsFormsApp1
             }
             else
             {
-                MessageBox.Show("Usuario, CPF e/ou senha incorretos",
+                MessageBox.Show("Usuario,/ou senha incorretos",
                     "ERRO NO LOGIN",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
 
                 txbName.Text = string.Empty; //Limpa o campo de usuario 
                 txbSenha.Text = string.Empty; //Limpa o campo de senha
-                txbCpf.Text = string.Empty; //Limpar o campo do cepefu
                 txbName.Focus(); //Coloca o foco no campo de usuario
 
 
