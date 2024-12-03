@@ -25,12 +25,13 @@ namespace WindowsFormsApp1
             Command.CommandText =
             @"INSERT INTO 
             Broker VALUES 
-            (@brokerName, @brokerCode, @state, @codeArea, @telephone, @email, @password)";
+            ( @brokerCode,@brokerPreco,@brokerChale,@brokerSuite)";
 
-            Command.Parameters.AddWithValue("@brokerName", broker.BrokerName);
-            Command.Parameters.AddWithValue("@brokerCode", broker.BrokerCode);
+            Command.Parameters.AddWithValue("@brokerSuite", broker.BrokerSuite);
+
+            Command.Parameters.AddWithValue("@brokerChale", broker.BrokerChale);
             
-            Command.Parameters.AddWithValue("@password", broker.Password);
+            
 
             try
             {
@@ -54,20 +55,17 @@ namespace WindowsFormsApp1
         {
             Command.Connection = Connect.ReturnConnection();
             Command.CommandText = @"UPDATE Broker SET 
-            BrokerName = @brokerName,
+            BrokerChale = @brokerChale,
             BrokerCode = @brokerCode,
-            State = @state,
-            CodeArea = @codeArea,
-            Telephone = @telephone,
-            Email = @email,
-            Password = @password
+            BrokerSuite = @brokerSuite,
+            BrokerPreco = @brokerPreco,
             WHERE Id = @id";
 
             Command.Parameters.AddWithValue("@id", broker.Id);
-            Command.Parameters.AddWithValue("@brokerName", broker.BrokerName);
+            Command.Parameters.AddWithValue("@brokerSuite", broker.BrokerSuite);
             Command.Parameters.AddWithValue("@brokerCode", broker.BrokerCode);
           
-            Command.Parameters.AddWithValue("@password", broker.Password);
+            Command.Parameters.AddWithValue("@brokerPreco", broker.BrokerPreco);
 
             try
             {
@@ -121,9 +119,9 @@ namespace WindowsFormsApp1
                 {
                     Broker broker = new Broker(
                         (int)rd["Id"],
-                        (string)rd["BrokerName"],
-                        (string)rd["BrokerCode"],
-                        (string)rd["Password"]
+                        (string)rd["BrokerChale"],
+                        (string)rd["BrokerSuite"],
+                        (string)rd["BrokerPreco"]
                         );
                     brokers.Add(broker);
                 }
@@ -147,9 +145,12 @@ namespace WindowsFormsApp1
             Command.Connection = Connect.ReturnConnection();
             Command.CommandText = "SELECT * FROM Broker WHERE " +
                                   "BrokerCode = @brokerCode AND " +
-                                  "Password = @password";
+                                  "Chale = @brokerChale" +"Suite = @brokerSuite" + "Preco = @brokerPreco";
             Command.Parameters.AddWithValue("@brokerCode", broker.BrokerCode);
-            Command.Parameters.AddWithValue("@password", broker.Password);
+            ;
+            Command.Parameters.AddWithValue("@brokerChale", broker.BrokerChale);
+            Command.Parameters.AddWithValue("@brokerSuite", broker.BrokerSuite);
+            Command.Parameters.AddWithValue("@brokerPreco", broker.BrokerPreco);
 
             try
             {

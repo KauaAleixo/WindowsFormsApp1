@@ -31,5 +31,13 @@ namespace WindowsFormsApp1
         {
             MessageBox.Show("Reservado");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmPousada4 principal = new FrmPousada4();
+            this.Visible = false; // ESCONDER TELA 
+            principal.ShowDialog();//ABRI A TELA 
+            this.Visible = true; // VOLTA A MOSTRAR A TELA
+        }
     }
 }

@@ -9,15 +9,24 @@ namespace WindowsFormsApp1
 {
     internal class Broker
     {
-        public int Id { get; set; }
-        public string BrokerName { get; private set; }
-        public string BrokerCode { get; private set; }
-        public string Password { get; private set; }
+        internal object BrokerSuite;
+        internal object BrokerChale;
+        internal object BrokerPreco;
 
-        public Broker(int v, string brokerCode, string password, string v1)
+        public int Id { get; set; }
+        public string Brokerchale { get; private set; }
+        public string BrokerCode { get; private set; }
+        public string Brokersuite { get; private set; }
+        public string Brokerpreco { get; private set; }
+
+        public Broker(int v, string brokerCode, string BrokerChale, string v1)
         {
             BrokerCode = brokerCode;
-            Password = password;
+            Brokerchale = BrokerChale;
+            Brokersuite= (string)BrokerSuite;
+            Brokerpreco = (string)BrokerPreco;
+
+
         }
 
         public Broker(int id, string brokerName, string brokerCode,
@@ -31,10 +40,10 @@ namespace WindowsFormsApp1
         public Broker(string brokerName, string brokerCode,
             string state, int codeArea, string telephone, string email, string password)
         {
-            BrokerName = brokerName;
+            
             BrokerCode = brokerCode;
             
-            Password = password;
+            
         }
     }
 }
